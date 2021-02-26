@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rao-msg的测试</title>
+    <link rel="stylesheet" href="./rao-msg.css">
+</head>
+
+<body>
+    <button onclick="toast()">点击弹出弹窗</button>
+    <script type="text/javascript" src="./rao-msg.js"></script>
+    <script>
+        function toast() {
+            raoMsg.message('这是一则提示', { isBtn: true, btnHoverColor: 'blue', btnText: '取消' }).then((res) => {
+                console.log('完成');
+            }).catch(err => {
+                console.log('取消了')
+            })
+        }
+    </script>
+</body>
+
+</html>
